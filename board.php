@@ -9,6 +9,19 @@
         <h2>Goals for Colloborations </h2>
         <p>These are the members of Cornell's SBA Board for the year 2017-2018. These members are hoping to create an enivoronment where students are motivated to aquire leaderhsip qualities that will help them in their future endeavors and will simulatneously learn about the various consultants that they can have and use to be the most successfult that they want to do. </p>
       </div>
+      <div class="search_form">
+      	<form id="search_form" name="search_form" class="form" method="POST" action="board.php">
+      		<!-- Search and name fields -->
+      		<div class="first_line">
+      			<input id="search_name" type="text" placeholder="Name" name="search_name">
+            <input id="search_netid" type="text" placeholder="netid" name="search_netid">
+            <input id="search_keyword" type="text" placeholder="keyword" name="search_keyword">
+      		</div>
+          <div class="first_line">
+      			<input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
+      		</div>
+      	</form>
+      </div>
       <div class="content-flex">
         <div class = "catalog_main">
           <div class = "catalog_item">
