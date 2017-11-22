@@ -35,6 +35,7 @@ if (isset($submit)) {
 	// Send back a redirect so that a refresh triggers a GET
 	header("Location: events.php");
 	return;
+  // Citation: code above is cited from lab13: comment system
 }
 
 ?>
