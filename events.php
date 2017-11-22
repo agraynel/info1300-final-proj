@@ -1,3 +1,43 @@
+<?php
+// Include files for CSV storage
+include("includes/csvStorage.php");
+
+// Load the comments file
+$csvFile = csvGetFile('data/comments.csv');
+
+// Create an array for the comments
+$comments = array();
+
+// get the comments
+foreach($csvFile as $row) {
+  array_push($comments, $row);
+}
+// // Ugly display of the comments list
+// var_dump($comments);
+
+// If there was a submitted comment
+$submit = $_POST["submit"];
+if (isset($submit)) {
+	$name = htmlspecialchars($_POST["name"]);
+	$commentText = htmlspecialchars($_POST["comment"]);
+
+	// create an array with the comment's information
+	$newComment = array($name, $commentText);
+
+	// add the new comment to the comment list so it is displayed
+	// technically not necessary once we add the redirect below,
+	// but we've left it in here so you can see how you would do it.
+	array_push($comments, $newComment);
+
+	// save new comment
+	csvAppendToFile($csvFile, $newComment);
+
+	// Send back a redirect so that a refresh triggers a GET
+	header("Location: events.php");
+	return;
+}
+
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -71,5 +111,40 @@
       </div>
     </div>
    </div>
+
+   <div id="commentsSection">
+     <div id="addComment">
+       <h2>Leave us a message if you want!</h2>
+       <form method="post" action="index.php" id="commentForm" novalidate>
+         <div class="nameHolder">
+           <p class = "labels">Name: </p>
+           <input id="name" name="name" placeholder="Your Name">
+         </div>
+         <div>
+           <p class = "labels">Comment: </p>
+           <textarea name="comment" placeholder="Your Comment" ></textarea>
+         </div>
+
+         <div>
+           <button type="submit" name="submit" class="submit">Submit</button>
+         </div>
+
+       </form>
+    </div>
+      <div id="commentsHolder">
+        <h2>What others've said</h2>
+        <?php foreach($comments as $row) {
+          $name = $row[0];
+          $commentText = $row[1];
+          ?>
+          <div class="comment">
+            <p class="commentBody"><?php echo($commentText); ?></p>
+            <p class="commentAuthor"><?php echo($name); ?></p>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+    </div>
   <?php include("includes/footer.php"); ?>
 </html>
