@@ -25,7 +25,7 @@ class Member {
 	// read board members information from data.txt
 	$members = array();
 	// check whether there is data.txt
-	if (!file_exists('files/data.txt')) {
+	if (!file_exists('data/data.txt')) {
 		echo "No data.txt exists!";
 		exit;
 	}

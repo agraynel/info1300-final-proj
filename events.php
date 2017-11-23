@@ -146,7 +146,6 @@ if (isset($submit)) {
       <div>
         <button type="submit" name="submit" class="submit">Submit</button>
       </div>
-
     </form>
   </div>
 </div>

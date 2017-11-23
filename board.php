@@ -13,7 +13,7 @@
   include("member.php");
 	//search if submit button is pressed
 	if (isset($_POST['search_submit'])) {
-		$file_pointer = fopen("files/data.txt", "r");
+		$file_pointer = fopen("data/data.txt", "r");
 		$members = array();
 
 		//filter the input to lowercase and prevent html interruption
