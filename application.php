@@ -45,6 +45,8 @@
     $formValid = $firstnameValid && $lastnameValid && $input1Valid && $emailValid && $input2Valid && $input3Valid;
     if ($formValid) {
       session_start();
+      $_SESSION['firstname'] = $firstName;
+      $_SESSION['lastname'] = $lastName;
 
       header("Location: thankyou.php");
       return;
@@ -140,7 +142,7 @@
         <div class="form-row">
           <div class="form-group">
             <p> <label>Please provide a link to your resume (REQUIRED). </label></p><br>
-            <textarea name="message2" rows="5" cols="220" value="<?php echo($input3);?>" 
+            <textarea name="message2" rows="5" cols="220" value="<?php echo($input3);?>"
             placeholder="Please provide the link to your resume " required></textarea><br>
             <span class="errorContainer <?php if ($input3Valid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               Your resume is required.
