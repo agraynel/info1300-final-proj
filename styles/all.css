@@ -72,7 +72,7 @@ padding-top: 3%;
   margin-left: auto;
 }
 .content-box {
-  width: 100%;
+  width: 90%;
   display: inline-flex;
   margin: auto;
 }
@@ -81,10 +81,10 @@ padding-top: 3%;
   display: inline-block;
   margin: auto;
 }
-.content {
+/*.content {
   background-color:#444444;
   display: block;
-}
+}*/
 .content-flex {
   background-color:#444444;
   display: inline-flex;
@@ -133,7 +133,8 @@ padding-top: 3%;
   transform: scale(1.3); /* code retrieved from W3 schools */
 }
 image {
-  width: 100%;
+  background-color:#444444;
+  width: 20%;
   border-radius: 10%;
 }
 .image1{
