@@ -12,8 +12,6 @@ $comments = array();
 foreach($csvFile as $row) {
   array_push($comments, $row);
 }
-// // Ugly display of the comments list
-// var_dump($comments);
 
 // If there was a submitted comment
 $submit = $_POST["submit"];
@@ -114,38 +112,43 @@ if (isset($submit)) {
    </div>
 
    <div id="commentsSection">
-     <div id="addComment">
-       <h2>Leave us a message if you want!</h2>
-       <form method="post" action="index.php" id="commentForm" novalidate>
-         <div class="nameHolder">
-           <p class = "labels">Name: </p>
-           <input id="name" name="name" placeholder="Your Name">
-         </div>
-         <div>
-           <p class = "labels">Comment: </p>
-           <textarea name="comment" placeholder="Your Comment" ></textarea>
-         </div>
-
-         <div>
-           <button type="submit" name="submit" class="submit">Submit</button>
-         </div>
-
-       </form>
-    </div>
-      <div id="commentsHolder">
-        <h2>What others've said</h2>
-        <?php foreach($comments as $row) {
-          $name = $row[0];
-          $commentText = $row[1];
-          ?>
-          <div class="comment">
-            <p class="commentBody"><?php echo($commentText); ?></p>
-            <p class="commentAuthor"><?php echo($name); ?></p>
-          </div>
-        <?php
-        }
-        ?>
+  <div id="commentsHolder">
+    <h2>Comments</h2>
+    <?php foreach($comments as $row) {
+      $name = $row[0];
+      $commentText = $row[1];
+      ?>
+      <div class="comment">
+        <p class="commentBody">
+          <?php echo($commentText); ?>
+        </p>
+        <p class="commentAuthor">
+          <?php echo($name); ?>
+        </p>
       </div>
-    </div>
+      <?php
+    }
+    ?>
+  </div>
+
+  <div id="addComment">
+    <h3>Add a Comment</h3>
+    <form method="post" action="events.php" id="commentForm" novalidate>
+      <div class="nameHolder">
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="Your Name">
+      </div>
+      <div>
+        <label class="commentLabel" for="comment">Comment: </label>
+        <textarea name="comment" placeholder="Your Comment"></textarea>
+      </div>
+
+      <div>
+        <button type="submit" name="submit" class="submit">Submit</button>
+      </div>
+
+    </form>
+  </div>
+</div>
   <?php include("includes/footer.php"); ?>
 </html>
