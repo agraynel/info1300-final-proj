@@ -30,7 +30,7 @@ class Member {
 		exit;
 	}
 
-	$file_pointer = fopen('files/data.txt', 'r');
+	$file_pointer = fopen('data/data.txt', 'r');
 
 	while (!feof($file_pointer)) {
 		$line = fgets($file_pointer);
