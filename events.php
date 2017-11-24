@@ -44,6 +44,9 @@ if (isset($submit)) {
    <title>Cornell SBA's Intended Events</title>
    <link rel="stylesheet" href="styles/all.css" type="text/css">
    <link rel="icon" href="images/icon.png">
+   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+   <script src="scripts/events.js"></script>
+
  </head>
   <?php include("includes/header.php"); ?>
    <div class = "container_events_projects">
@@ -58,8 +61,8 @@ if (isset($submit)) {
             <img class="image" id="events-education" src="images/education.png" alt = "events-education">
           </div>
           <div class = "content-flex-text">
-              <p> <i> EDUCATION SEMINARS  </i> </p>
-              <p>SBA provides an educative training series to its members by hosting
+              <p class="section1"> <i> EDUCATION SEMINARS  </i> </p>
+              <p class="speakers1">SBA provides an educative training series to its members by hosting
                 bi-monthly discussions and monthly seminars. These lectures begin with
                 the basic elements of business, then develop into the purpose and practical
                 applications of corporate sustainability. Our training series is an effective
@@ -75,8 +78,8 @@ if (isset($submit)) {
             <img class="image" id="events-blackrock"  src="images/blackrock.png" alt = "events-blackrock">
           </div>
           <div class = "content-flex-text">
-               <p> <i> GUEST SPEAKERS FROM BLACKROCK </i> </p>
-             <p class="speakers1">SBA values the experience of today’s industry
+               <p class="section2"> <i> GUEST SPEAKERS FROM BLACKROCK </i> </p>
+             <p class="speakers2">SBA values the experience of today’s industry
                 leaders. We invite representatives from companies such as Credit Suisse,
                 Guest speakers give students a more dimensional perspective on
                 sustainable business and its functions today. Guest Speaker from
@@ -96,8 +99,8 @@ if (isset($submit)) {
               <img class="image" id="events-networking" src="images/networking.png" alt = "events-networking">
           </div>
            <div class = "content-flex-text">
-              <p> <i> NETWORKING WITH COMPANIES </i> </p>
-              <p>A primary goal of SBA is to provide the means for our members to
+              <p class="section3"> <i> NETWORKING WITH COMPANIES </i> </p>
+              <p class="speakers3">A primary goal of SBA is to provide the means for our members to
               engage with industry leaders, powerful alumni, influential faculty, and
               other club members in the context of entering the industry. We achieve
               this through private networking events where members not only build
