@@ -49,63 +49,63 @@
         <h1> Current Cornell University  General Members and Board Members of SBA </h1>
       </div>
       <p class="primary_statement">
-      <b> <i> BOARD MEMBERS </i> <br/>
+      <b> <i> BOARD MEMBERS </i> </b><br/>
         These are the members of Cornell's SBA Board for the year 2017-2018.
         These members are hoping to create an enivoronment where students are
         motivated to aquire leaderhsip qualities that will help them in their
         future endeavors and will simulatneously learn about the various
         consultants that they can have and use to be the most successfull
         in whatthat they want to do. </p>
-        <form id="search_form" name="search_form" class="search_form" method="POST" action="board.php">
-    		<!-- Search name and net id fields -->
-      		<div class="first_line">
-    			  <input id="searchName" type="text" placeholder="Name" name="searchName" maxlength="25" autofocus pattern="[0-9A-Za-z-_ ]*">
-          </div>
-          <div class="first_line">
-            <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
-          </div>
-          <div class="search_button">
-            <input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
-          </div>
-      	</form>
     </div>
+    <form id="search_form" name="search_form" class="search_form" method="POST" action="board.php">
+    <!-- Search name and net id fields -->
+      <div class="first_line">
+        <input id="searchName" type="text" placeholder="Name" name="searchName" maxlength="25" autofocus pattern="[0-9A-Za-z-_ ]*">
+      </div>
+      <div class="first_line">
+        <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
+      </div>
+      <div class="search_button">
+        <input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
+      </div>
+    </form>
+  </div>
 
      <!-- PLEASE Note that the reason many divs are used is for the show and hide effect
          for the affiliated with CSS that has been done on W3 Schools -->
-    <div class="content-flex_board">
-      <div class = "catalog_main">
-      <?php
-	      global $members;
-      // get member information from the class
-    		foreach ($members as $member) {
-    			$name = $member->name;
-    			$netid = $member->netid;
-    			$job = $member->job;
-    			$school = $member->school;
-    			$description = $member->description;
-    			$image = $member->image;
-        ?>
-          <div class = "catalog_item">
-            <?php echo '<img class="catalog_image" src="' . $image . '" alt = $name>';?>
-            <div class='catalog_description'>
-              <div class='show_catalog'>
-                <div class='status_catalog'>
-                  <h3 class='name'><?php echo $name ?> (<?php echo $netid ?>)</h3>
-                  <h3 class='name'><?php echo $job ?></h3>
-                  <h3 class='name'><?php echo $school ?></h3>
-              </div>
-              </div>
-         			<div class='hide_catalog'>
-         				<div class='description'>
-                  <h4><?php echo $description ?></h4>
-                </div>
-         			</div>
-         		</div>
+  <div class="content-flex_board">
+    <div class = "catalog_main">
+    <?php
+      global $members;
+    // get member information from the class
+  		foreach ($members as $member) {
+  			$name = $member->name;
+  			$netid = $member->netid;
+  			$job = $member->job;
+  			$school = $member->school;
+  			$description = $member->description;
+  			$image = $member->image;
+      ?>
+      <div class = "catalog_item">
+        <?php echo '<img class="catalog_image" src="' . $image . '" alt = $name>';?>
+        <div class='catalog_description'>
+          <div class='show_catalog'>
+            <div class='status_catalog'>
+              <h3 class='name'><?php echo $name ?> (<?php echo $netid ?>)</h3>
+              <h3 class='name'><?php echo $job ?></h3>
+              <h3 class='name'><?php echo $school ?></h3>
           </div>
-        <?php } ?>
-        </div>
+          </div>
+     			<div class='hide_catalog'>
+     				<div class='description'>
+              <h4><?php echo $description ?></h4>
+            </div>
+     			</div>
+     		</div>
       </div>
+      <?php } ?>
     </div>
   </div>
+</div>
   <?php include "includes/footer.php";?>
 </html>
