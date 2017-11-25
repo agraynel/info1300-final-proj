@@ -480,23 +480,45 @@ textarea {
 }
 /* Code for first line of search query and button
 for search query */
-.first_line{
-  float:right;
+.search_form {
+  display: inline-block;
+  margin: 1%;
 }
-#search_name{
-  margin-right: 100px;
-  max-width: 250px;
-  height:40px;
-  overflow-x: visible;
-  margin-top: 25px;
-  padding-right: 85px;
+
+.search_button {
+  margin-left: 40%;
+  width:45%;
 }
-#submit{
-  margin-right: 50px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  font-weight: bold;
+
+.search_form input[type = text] {
+	border-radius: 8px;
+	padding: 2%;
+	font-size: 35px;
+  width: 80%;
+	border: solid 1px #979797;
 }
+
+.search_form input[class = "button"] {
+	font-weight: bold;
+  background-color: #3C3C3C;
+  color: white;
+  font-size: 30px;
+	padding: 1%;;
+	border-radius: 8px;
+}
+
+.search_form input[class="button"]:hover {
+	background-color: green;
+	transition: background-color 0.6s ease;
+}
+
+.first_line {
+	display: inline-block;
+  width: 40%;
+	margin: 1%;
+	padding: 1%;
+}
+
 /* Code for footer*/
 .footlink {
   width: 100%;

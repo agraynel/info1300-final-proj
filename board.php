@@ -56,17 +56,19 @@
         future endeavors and will simulatneously learn about the various
         consultants that they can have and use to be the most successfull
         in whatthat they want to do. </p>
+        <form id="search_form" name="search_form" class="search_form" method="POST" action="board.php">
+    		<!-- Search name and net id fields -->
+      		<div class="first_line">
+    			  <input id="searchName" type="text" placeholder="Name" name="searchName" maxlength="25" autofocus pattern="[0-9A-Za-z-_ ]*">
+          </div>
+          <div class="first_line">
+            <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
+          </div>
+          <div class="search_button">
+            <input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
+          </div>
+      	</form>
     </div>
-    <form id="search_form" name="search_form" class="form" method="POST" action="board.php">
-		<!-- Search name and net id fields -->
-  		<div class="first_line">
-  			<input id="searchName" type="text" placeholder="Name" name="searchName" maxlength="25" autofocus pattern="[0-9A-Za-z-_ ]*">
-        <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
-  		</div>
-  		<div class="basic-profile-form">
-  			<input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
-  		</div>
-  	</form>
 
      <!-- PLEASE Note that the reason many divs are used is for the show and hide effect
          for the affiliated with CSS that has been done on W3 Schools -->
