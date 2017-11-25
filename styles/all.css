@@ -92,7 +92,7 @@ padding-top: 3%;
 .content-flex_board {
   background-color:white;
   display: inline-flex;
-  margin-left: 130px;
+  width: 90%;
 }
 .content-flex-image {
   width: 30%;
