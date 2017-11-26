@@ -1,7 +1,10 @@
+
+
 nav{
 text-align: center;
 padding-top: 1.5%;
 padding-bottom: 2%;
+font-family: Georgia;
 }
 nav a {
     padding: 1%;
@@ -22,13 +25,16 @@ display: block;
 margin: 0 auto;
 padding-top: 1%;
 }
-.header h1{
+.header h1, h2{
 text-align: center;
 padding-top: 2%;
 padding-bottom: 2%;
 font-size: 35px;
+text-decoration: none;
 }
-
+body{
+font-family: Georgia;
+}
 .title_image{
 width: 70%;
 display: block;
@@ -54,7 +60,7 @@ padding-top: 3%;
 }
 .container_events_projects{
   background-color: white;
-  color: White;
+  color:Black;
   margin: auto;
   width: 85%;
   text-align: center;
@@ -62,6 +68,7 @@ padding-top: 3%;
 }
 .container-text {
   padding:2%;
+  margin-left: 100px
 }
 .container-text_board{
   margin-left: 100px;
@@ -86,16 +93,17 @@ padding-top: 3%;
   display: block;
 }*/
 .content-flex {
-  background-color:#444444;
+  background-color:white;
   display: inline-flex;
 }
 .content-flex_board {
   background-color:white;
   display: inline-flex;
   width: 90%;
+  margin-left: 10%;
 }
 .content-flex-image {
-  width: 30%;
+  width: 80%;
   padding: 2%;
   margin:2%;
 }
@@ -123,6 +131,7 @@ padding-top: 3%;
 .primary_statement{
    font-weight: bold;
    color:black;
+   line-height: 200%;
  }
 /* Code for navigation */
 
@@ -143,7 +152,7 @@ image {
 }
 
 .image_gap{
-  width: 100%;
+  width: 80%;
   border-radius: 10%;
   margin-left: 25px;
   margin-top: 25px;
@@ -154,7 +163,7 @@ image {
 }
 
 img{
-  width: 100%;
+  width: 80%;
   padding-top: 10px;
   padding-bottom: 5px;
 }
@@ -164,9 +173,9 @@ body h1 {
 	color: green;
 	font-weight: bold;
   margin: 1%;
-	font-family: sans-serif;
+	font-family: Georgia;
   text-decoration: underline;
- letter-spacing: 3px;
+ letter-spacing: 2px;
 }
 
 .contains h1 {
@@ -177,7 +186,7 @@ body h1 {
 	font-weight: bold;
   margin: 1%;
   text-shadow:2px 3px 3px #333333;
-	font-family: sans-serif;
+	font-family: Georgia;
  letter-spacing: 2px;
 line-height: 200%;
 }
@@ -213,7 +222,7 @@ elements specified within the container */
   text-align: left;
   padding: 1px;
   font-size: 25px;
-	color: White;
+	color: Black;
   font-weight: bold;
 }
 .container .primary_statement{
@@ -261,16 +270,15 @@ label {
  */
 .catalog_main {
 	display: inline-block;
-	margin: 0 auto;
+	margin: 10%;
 	width: 80%;
-
 }
 .catalog_item {
 	position: relative;
 	overflow: hidden;
 	background-size: 100%;
-	margin: 3%;
-	width: 40%;
+	margin: 1%;
+	width: 45%;
 	min-height: 250px;
 	display: inline-block;
   background-color: transparent;
@@ -381,7 +389,7 @@ form textarea{
   width: 100%;
 }
 #submit {
-  margin-left: -60px;
+  margin-left: -50%;
 
 }
 .form_container select{
@@ -482,7 +490,10 @@ textarea {
 for search query */
 .search_form {
   display: inline-block;
-  margin: 1%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3%;
 }
 
 .search_button {
@@ -583,7 +594,6 @@ h2 {
 .label {
   display: block;
   margin-bottom: 4px;
-
 }
 
 .submit {
@@ -602,7 +612,8 @@ h2 {
   font-weight: bold;
   background-color: Green;
   padding: 10px;
-  font-size: 18px;
+  font-size: 28px;
+  margin-left: 20%;
 
   cursor: pointer;
 }
@@ -622,7 +633,7 @@ h2 {
   font-weight: bold;
   background-color: Green;
  padding: 10px;
-  font-size: 18px;
+  font-size: 28px;
 
   cursor: pointer;
 }
@@ -639,9 +650,7 @@ h2 {
 .section3 {
   font-weight: bold;
   background-color: Green;
-
-  font-size: 18px;
-
+  font-size: 28px;
   cursor: pointer;
 }
 
@@ -650,6 +659,64 @@ h2 {
 }
 
 .speakers3 {
+  background: #bbbbbb;
+ padding: 10px;
+
+  display: none;
+}
+
+.company1 {
+  font-weight: bold;
+  background-color: Green;
+  padding: 10px;
+  font-size: 28px;
+  margin-right: 60%;
+width: 100%;
+
+  cursor: pointer;
+}
+
+.text1:hover {
+  background-color: Black;
+}
+
+.text1 {
+  background: #bbbbbb;
+  padding: 10px;
+
+  display: none;
+}
+
+.company2 {
+  font-weight: bold;
+  background-color: Green;
+ padding: 10px;
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+.text2:hover {
+  background-color: Black;
+}
+
+.text2 {
+  background: #bbbbbb;
+  padding: 10px;
+  display: none;
+}
+.company3 {
+  font-weight: bold;
+  background-color: Green;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.text3:hover {
+  background-color: Black;
+}
+
+.text3 {
   background: #bbbbbb;
  padding: 10px;
 

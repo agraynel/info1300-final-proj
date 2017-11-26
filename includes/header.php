@@ -11,4 +11,3 @@
     <a title="Citations" href="citations.php"> CITATION</a>
   </nav>
 </header>
-<hr>
