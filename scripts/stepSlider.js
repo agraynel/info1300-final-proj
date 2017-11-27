@@ -1,16 +1,26 @@
-const steps = ['#step1', '#step2', '#step3', '#step4', '#step5'];
+function zoomFirst() {
+  initSlider();
+  for (let i = 1; i < 5; i++) {
+    var image = document.getElementById(i);
+    image.style.opacity = 0.2;
+    image.style.width = "100%";
+  }
+}
+
 function zoomIn(img) {
-  img.style.width = "150%";
-  var id = img.id
+  initSlider();
+  img.style.width = "300%";
+  img.style.opacity = 3;
+  var id = img.id;
   for (let i = 0; i < 5; i++) {
     if (i == id) continue;
     var image = document.getElementById(i);
     image.style.opacity = 0.2;
-    image.style.width = "50%";
+    image.style.width = "100%";
   }
 }
 
-function zoomOut(img) {
+function initSlider() {
   for (let i = 0; i < 5; i++) {
     var image = document.getElementById(i);
     image.style.opacity = 1;
