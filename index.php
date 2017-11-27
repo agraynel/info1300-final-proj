@@ -28,20 +28,20 @@
           <br>
           <br>
           <div class = "content-box">
-            <div class = "content">
-              <img class="image" id="0" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" src="images/step1.png" alt = "content-image">
+            <div class = "content1">
+              <img class="image" id="0" onmouseover="zoomFirst()" onmouseout="initSlider()" src="images/step1.png" alt = "content-image">
             </div>
             <div class = "content">
-              <img class="image" id="1" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" src="images/step2.png" alt = "content-image">
+              <img class="image" id="1" onmouseover="zoomIn(this)" onmouseout="initSlider()" src="images/step2.png" alt = "content-image">
             </div>
             <div class = "content">
-              <img class="image" id="2" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" src="images/step3.png" alt = "content-image">
+              <img class="image" id="2" onmouseover="zoomIn(this)" onmouseout="initSlider()" src="images/step3.png" alt = "content-image">
             </div>
             <div class = "content">
-              <img class="image" id="3" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" src="images/step4.png" alt = "content-image">
+              <img class="image" id="3" onmouseover="zoomIn(this)" onmouseout="initSlider()" src="images/step4.png" alt = "content-image">
             </div>
             <div class = "content">
-              <img class="image" id="4" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" id="step5" src="images/step5.png" alt = "content-image">
+              <img class="image" id="4" onmouseover="zoomIn(this)" onmouseout="initSlider()" id="step5" src="images/step5.png" alt = "content-image">
             </div>
           </div>
         </div>

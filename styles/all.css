@@ -88,10 +88,17 @@ padding-top: 3%;
   display: inline-block;
   margin: auto;
 }
-/*.content {
-  background-color:#444444;
+
+.content {
   display: block;
-}*/
+  width: 50%;
+  opacity: 1;
+}
+.content1 {
+  display: block;
+  width: 150%;
+  opacity: 1;
+}
 .content-flex {
   background-color:white;
   display: inline-flex;
