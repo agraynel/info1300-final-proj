@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Cornell Board Members</title>
-  <link rel="stylesheet" href="styles/all.css" type="text/css">
-  <link rel="icon" href="images/icon.png">
-</head>
 <?php
-include("includes/header.php");
-
-// implement search functionality
-// This is the PHP class of board members.
+include ("includes/header.php");
+// implement search functionality, developed by Yi Chen and Anisha, citations are present when needed
+// This is the PHP class of board members. structure of class learned from python at umich during the summer, conept of this introduced by Yi
 class Member {
 		public $name;
 		public $netid;
@@ -28,17 +19,14 @@ class Member {
 			$this->image = $image;
 		}
 	}
-
 	// read board members information from data.txt
 	$members = array();
-	// check whether there is data.txt
+	// check whether there is data.txt-- learned from python at umich
 	if (!file_exists('data/data.txt')) {
 		echo "No data.txt exists!";
 		exit;
 	}
-
-	$file_pointer = fopen('data/data.txt', 'r');
-
+	$file_pointer = fopen('data/data.txt', 'r'); //opening file based on what I learnt from Python at umich, syntax was googled
 	while (!feof($file_pointer)) {
 		$line = fgets($file_pointer);
 		//CREDITS: http://stackoverflow.com/questions/16477098/how-can-i-remove-n-in-string-in-php
@@ -46,17 +34,16 @@ class Member {
 		$member = explode( '\t', $line);
 		$members[] = new Member($member[0], $member[1], $member[2], $member[3], $member[4], $member[5]);
 	}
+	fclose($file_pointer); //closing of file learned from python
 
-	fclose($file_pointer);
-//search if submit button is pressed
-if (isset($_POST['search_submit'])) {
+
+  //search if submit button is pressed
+  if (isset($_POST['search_submit'])) {
   $file_pointer = fopen("data/data.txt", "r");
   $members = array();
-
   //filter the input to lowercase and prevent html interruption
   $searchName = isset($_POST['searchName']) ? htmlentities(strtolower($_POST['searchName'])) : false;
   $searchNetid = isset($_POST['searchNetid']) ? htmlentities(strtolower($_POST['searchNetid'])) : false;
-
   // find matching CREDITS: http://www.w3school.com.cn/php/func_string_strtolower.asp
   while (!feof($file_pointer)) {
     $line = fgets($file_pointer);
@@ -65,7 +52,6 @@ if (isset($_POST['search_submit'])) {
     //convert to lower case to compare CREDITS: http://stackoverflow.com/questions/16477098/how-can-i-remove-n-in-string-in-php
     $lowerCaseLine = strtolower($line1);
     $lowerCaseMember = explode('\t', $lowerCaseLine);
-
     $nameMatching = (empty($searchName) || preg_match("/$searchName/", $lowerCaseMember[0]));
     $netidMatching = (empty($searchNetid) || preg_match("/$searchNetid/", $lowerCaseMember[1]));
     $isMatch = $nameMatching && $netidMatching;
@@ -77,15 +63,23 @@ if (isset($_POST['search_submit'])) {
 
 }
 ?>
-<body>
-  <div class = "container_events_projects">
-    <div class = "container-text_board">
-      <div class="title_image">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cornell Board Members</title>
+  <link rel="stylesheet" href="styles/all.css" type="text/css">
+  <link rel="icon" href="images/icon.png">
+</head>
+ <body>
+   <div class = "container_events_projects">
+     <div class = "container-text_board">
+       <div class="title_image">
         <img class="title" src="images/cornell_students.jpg" alt = "title">
         <div class = "header">
           <h1> Current Cornell University  General Members and Board Members of SBA </h1>
         </div>
-        <p class="primary_statement">
+        <p class="main_statement">
           <b> <i> BOARD MEMBERS </i> </b><br/>
           These are the members of Cornell's SBA Board for the year 2017-2018.
           These members are hoping to create an enivoronment where students are
@@ -102,15 +96,12 @@ if (isset($_POST['search_submit'])) {
               <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
             </div>
             <div class="search_button">
-              <input id="submit" class="button" type="submit" name="search_submit" value="SEARCH">
+              <input id="submit" id="sub_button" class="button" type="submit" name="search_submit" value="SEARCH">
             </div>
           </form>
         </div>
       </div>
-
-
-      <!-- PLEASE Note that the reason many divs are used is for the show and hide effect
-      for the affiliated with CSS that has been done on W3 Schools -->
+      <!-- Code has been incoprorated by Yi Chen and Anisha , after Yi taught Anisha some php functions -->
       <div class="content-flex_board">
         <div class = "catalog_main">
           <?php
@@ -147,4 +138,4 @@ if (isset($_POST['search_submit'])) {
     </div>
   </body>
   <?php include "includes/footer.php";?>
-  </html>
+</html>

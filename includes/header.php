@@ -2,7 +2,7 @@
   <figure class="logo">
     <img class="logo" alt="club logo" src="images/logo.png"/>
   </figure>
-  <nav>
+  <nav id="navigation">
     <a title="Home" href="index.php"> HOME</a>
     <a title="Board" href="board.php"> BOARD</a>
     <a title="Projects" href="projects.php"> PROJECTS</a>

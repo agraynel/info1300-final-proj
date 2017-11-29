@@ -40,8 +40,7 @@
     } else {
       $input3Valid = false;
     }
-
-
+    //checking is form is valid, then submitting to response.php page
     $formValid = $firstnameValid && $lastnameValid && $input1Valid && $emailValid && $input2Valid && $input3Valid;
     if ($formValid) {
       session_start();
@@ -61,9 +60,6 @@
     $input3Valid = true;
 
   }?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -91,7 +87,7 @@
           </div>
           <div class="form-group1">
             <p> <label>Please Write your Last Name(REQUIRED):</label></p>
-            <input type="text" name="lastname" cols="100"  id="lastname"
+            <input type="text" name="lastname" id="lastname"
               placeholder="Please write your last name" value="<?php echo($lastName);?>" required><br>
             <span class="errorContainer <?php if ($lastnameValid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               Your last name is required.
@@ -99,7 +95,7 @@
           </div>
           <div class="form-group1">
             <p> <label>Please Write your Email(REQUIRED):</label></p>
-            <input type="email" name= "email" id=“userEmail” cols="100" name="E-mail" value="<?php echo($email);?>"
+            <input type="email" name= "email" id=“userEmail” name="E-mail" value="<?php echo($email);?>"
               placeholder="Please write your email"required><br>
             <span class="errorContainer <?php if ($emailValid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               Your e-mail is required.
@@ -108,7 +104,7 @@
         </div>
         <div class="form-row">
           <div class="form-group1">
-            <p> <label> Please Select your Class Year (REQUIRED)</label> </p>
+            <p> <label> Please Select your Class Year (OPTIONAL)</label> </p>
                <select name="contact">
                    <option value=""> -- Select One -- </option>
                 <option value="2018">2018</option>
@@ -122,7 +118,7 @@
         <div class="form-row">
           <div class="form-group">
             <p> <label> Please Write your Major(REQUIRED)</label></p>
-            <textarea name="message"  cols="220" placeholder="Please write your intended Major(s)"
+            <textarea name="message" placeholder="Please write your intended Major(s)"
             required value="<?php echo($input1);?>"></textarea><br>
             <span class="errorContainer <?php if ($input1Valid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               This section is required.
@@ -132,7 +128,7 @@
         <div class="form-row">
           <div class="form-group">
             <p> <label>Please, briefly explain why you want to join us. Max 400 words (REQUIRED)</label></p>
-            <textarea name="message1" rows="20" cols="220" value="<?php echo($input2);?>"
+            <textarea name="message1" rows="20" value="<?php echo($input2);?>"
             placeholder="Please explain why you want to join the program" required></textarea><br>
             <span class="errorContainer <?php if ($input2Valid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               This section is required.
@@ -142,7 +138,7 @@
         <div class="form-row">
           <div class="form-group">
             <p> <label>Please provide a link to your resume (REQUIRED). </label></p><br>
-            <textarea name="message2" rows="5" cols="220" value="<?php echo($input3);?>"
+            <textarea name="message2" rows="5" value="<?php echo($input3);?>"
             placeholder="Please provide the link to your resume " required></textarea><br>
             <span class="errorContainer <?php if ($input3Valid) { echo($HIDDEN_ERROR_CLASS);} ?>" id="nameError">
               Your resume is required.
@@ -151,12 +147,13 @@
         </div>
         <div class="form-row">
           <div class="form-flex">
-            <input class="button" name = "submit" id="submit" value="SUBMIT" type="submit">
+            <input class="button" name = "submit" id="sub" value="SUBMIT" type="submit">
             <input class="button" id="reset" value="RESET" type="reset">
           </div>
         </div>
       </form>
     </div>
-  </div>
-  <?php include("includes/footer.php"); ?>
+   </div>
+   <?php include("includes/footer.php"); ?>
+ </body>
 </html>

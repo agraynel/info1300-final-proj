@@ -30,9 +30,9 @@
                <a href="http://www.gapinc.com/content/gapinc/html.html">
                <img class="image_gap" src="images/gap.png" target="_blank"alt ="content-image"></a>
           </div>
-            <div class = "content-flex-text">
-              <p class="company1"> View Colloboration with GAP   </p>
-              <p class="text1" >This is one of the first companies that SBA will be working with. Gap,
+            <div class = "content-flex-text1">
+             <p> Colloboration with GAP INC. </p>
+              <p >This is one of the first companies that SBA will be working with. Gap,
               Inc known to many as one of the finer clothing places, has been faced with
               with many charges due to the lack of thier care for child labor, and
               requring safe practices of workers in factories.This has led to Gap
@@ -47,9 +47,9 @@
               <a href="http://www.alphanr.com/Pages/Default.aspx">
               <img class="image1" src="images/alpha.png" target="_blank" alt = "content-image"> </a>
            </div>
-           <div class = "content-flex-text">
-            <p class="company2"> View Colloboration with Alpha Natural Resources </p>
-            <p class="text2">They are currently having many issues due to the fact that their internal
+           <div class = "content-flex-text1">
+            <p>Colloboration with Alpha Natural Resources </p>
+            <p>They are currently having many issues due to the fact that their internal
              operations has been releasing a lot of pollutants into the atmopshere.
              SBA hopes to work with this company and provide them with
              metrics that they can use to help sove many of the enviornmental issues they
@@ -62,9 +62,9 @@
               <a href="http://www.sustainalytics.com/">
               <img class="image1" src="images/sustainable.png" target="_blank" alt = "content-image"> </a>
           </div>
-          <div class = "content-flex-text">
-            <p class="company3">  View Colloboration with Sustainable Analytics </p>
-            <p class="text3">This is another company that SBA plans to work with. There are a
+          <div class = "content-flex-text1">
+            <p >Colloboration with Sustainable Analytics </p>
+            <p>This is another company that SBA plans to work with. There are a
                company that aims to help other companies evaluate their sustainability
                progress through the use of metrics. This Semester SBA will work with this
                 company in order to help them find companies who require environmental consulations.

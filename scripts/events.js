@@ -1,23 +1,14 @@
+//preparing the function to get ready
 $(document).ready(function() {
-  console.log("DOM is ready")
-
-  $(".section1").click( function() {
-    console.log("more clicked");
-
+    $(".section1").click( function() {
     $(".speakers1").toggle();
   });
 
   $(".section2").click( function() {
-    console.log("more clicked");
-
-    $(".speakers2").toggle();
+  $(".speakers2").toggle();
   });
 
   $(".section3").click( function() {
-    console.log("more clicked");
-
-    $(".speakers3").toggle();
+  $(".speakers3").toggle();
   });
-
-
 });
