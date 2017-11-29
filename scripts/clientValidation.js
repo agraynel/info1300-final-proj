@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $("#contact_form").on("submit", function() {
     var formValid = true;
-
+    //checking if name, phone and question is valid
     var nameIsValid = $("#name").prop("validity").valid;
     if(nameIsValid) {
       $("#nameError").hide();
@@ -11,15 +11,6 @@ $(document).ready(function () {
       $("#nameError").show();
       formValid = false;
     }
-
-    var phoneIsValid = $("#phone").prop("validity").valid;
-    if(phoneIsValid) {
-      $("#phoneError").hide();
-    } else {
-      $("#phoneError").show();
-      formValid = false;
-    }
-
     var questionIsValid = $("#question").prop("validity").valid;
     if(questionIsValid) {
       $("#messageError").hide();
@@ -27,15 +18,13 @@ $(document).ready(function () {
       $("#messageError").show();
       formValid = false;
     }
-
     // if email is empty (that is, the value is missing)
-    if($("#userEmail").prop("validity").valueMissing) {
+    if($("#userEmail").prop("validity").valueMissing)
       $("#emailErrorNoEmail").show();
       formValid = false;
     } else {
       $("#emailErrorNoEmail").hide();
     }
-
     // if email is invalid (that is, there is a type mismatch)
     if($("#userEmail").prop("validity").typeMismatch) {
       $("#emailErrorInvalEmail").show();

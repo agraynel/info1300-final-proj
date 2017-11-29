@@ -1,11 +1,6 @@
 <?php
-/**
- *
- * User: Martin Halamíček
- * Date: 13.4.12
- * Time: 15:31
- *
- */
+
+//Citation from Lab 13 and Head Ta Grant Storey//
 
 namespace Keboola\Csv;
 
@@ -33,7 +28,6 @@ class CsvFile extends \SplFileInfo implements \Iterator
 		$this->_setEnclosure($enclosure);
 
 	}
-
 	/**
 	 * @param $delimiter
 	 * @return CsvFile
@@ -114,28 +108,16 @@ class CsvFile extends \SplFileInfo implements \Iterator
 	{
 		$str = $this->rowToStr($row);
 		$ret = fwrite($this->_getFilePointer('w+'), $str);
-
-		/* According to http://php.net/fwrite the fwrite() function
-		 should return false on error. However not writing the full
-		 string (which may occur e.g. when disk is full) is not considered
-		 as an error. Therefore both conditions are necessary. */
 		if (($ret === false) || (($ret === 0) && (strlen($str) > 0)))  {
 				throw new Exception("Cannot open file $this",
 				Exception::WRITE_ERROR, NULL, 'writeError');
 		}
 	}
-
-	// Addition by Grant Storey on 11/10/17
-	// Append rows to the end of the file rather than the start
+  // Addition by Grant Storey on 11/10/17//
 	public function appendRow(array $row)
 	{
 		$str = $this->rowToStr($row);
 		$ret = fwrite($this->_getFilePointer('a+'), $str);
-
-		/* According to http://php.net/fwrite the fwrite() function
-		 should return false on error. However not writing the full
-		 string (which may occur e.g. when disk is full) is not considered
-		 as an error. Therefore both conditions are necessary. */
 		if (($ret === false) || (($ret === 0) && (strlen($str) > 0)))  {
 				throw new Exception("Cannot open file $this",
 				Exception::WRITE_ERROR, NULL, 'writeError');
@@ -143,15 +125,9 @@ class CsvFile extends \SplFileInfo implements \Iterator
 	}
 
 	// Addition by Grant Storey on 11/10/17
-	// Empties out the file
 	public function clearFile()
 	{
 		$ret = fwrite($this->_getFilePointer('w+'), "");
-
-		/* According to http://php.net/fwrite the fwrite() function
-		 should return false on error. However not writing the full
-		 string (which may occur e.g. when disk is full) is not considered
-		 as an error. Therefore both conditions are necessary. */
 		if (($ret === false) || (($ret === 0) && (strlen($str) > 0)))  {
 				throw new Exception("Cannot open file $this",
 				Exception::WRITE_ERROR, NULL, 'writeError');
@@ -218,7 +194,6 @@ class CsvFile extends \SplFileInfo implements \Iterator
 			}
 			$lineBreaksPositions[$lineBreak] = $position;
 		}
-
 
 		asort($lineBreaksPositions);
 		reset($lineBreaksPositions);
@@ -316,8 +291,6 @@ class CsvFile extends \SplFileInfo implements \Iterator
 			$this->_fileMode = $mode;
 			$this->_openFile($mode);
 		} elseif ($mode != $this->_fileMode and $mode != 'r') {
-			// if we went from to 'w+' or 'a+' from something else, we have to reopen
-			// the file.
 			$this->_closeFile($mode);
 			$this->_openFile($mode);
 			$this->_fileMode = $mode;
