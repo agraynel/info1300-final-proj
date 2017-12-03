@@ -11,7 +11,9 @@
 <body>
   <?php include("includes/header.php"); ?>
     <div id="container_button">
-      <p class="welcome"> Welcome to Cornell's Sustainable Business Alliance Club</p>
+      <p class="welcome"> Welcome to Cornell's Sustainable Business Alliance Club <br/>
+        <p id="home"> Here you can view Cornell SBA's plans for integrating sustainability with business </p>
+
         <div id="images_container">
           <img id="image1" alt="Image of Steps" class="showimage slideshow" src="images/sustainable_image.png">
           <img id="image2" alt=" Sustainability Mehchanisms" src="images/mpic2.png"  class="slideshow">

@@ -14,11 +14,9 @@ function csvGetFile($filePath) {
 // clear a file
 function csvClearFile($csvFile) {
 	$csvFile->clearFile($value);
-
 }
 // append to a file
 function csvAppendToFile($csvFile, $value) {
 	$csvFile->appendRow($value);
 }
-
 ?>

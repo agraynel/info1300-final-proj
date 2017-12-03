@@ -1,3 +1,4 @@
+
 <?php
 //Citation from Lab 13
 // Code for inputting data of comments  into CSV file
@@ -35,7 +36,7 @@ if (isset($submit)) {
    <div class = "container_events_projects">
     <div class = "container-text_events">
       <div class = "contains-header">
-          <h1>Events for SBA Members:</h1>
+          <h1> Events: Skill Wokrshop, Networking Conferences, Black Rock Guest Lecturers</h1>
       </div>
         <img class="title" src="images/greenevents.png" alt = "title">
       <div class = "content-block">

@@ -50,9 +50,9 @@ h2{
   color:white;
 }
 
-p {
-  color:black;
-  font-size: 15px;
+#home{
+font-size: 25px;
+color:Green;
 }
 
 .welcome{
@@ -87,6 +87,7 @@ p {
   text-align: left;
   padding: 10px;
 }
+
 .container_events_projects{
   background-color: white;
   color:Black;
@@ -108,14 +109,14 @@ p {
   background-color: green;
 }
 .container-text_board{
-  margin-left: 175px;
+  margin-left: 10%;
   background-color: green;
 }
 
 .container-text_board1{
-  margin-top: 300px;
+
   background-color: green;
-  margin-top: 300px;
+
 }
 .container-text_events {
   padding:2%;
@@ -209,6 +210,8 @@ ol{
   font-family: Georgia;
   font-size: 25px;
   font-weight: bold;
+  padding-top: 1%;
+  padding-bottom: 1%;
 
 
 }
@@ -334,6 +337,23 @@ font-weight: bold;
 text-align: left;
 
 }
+
+
+#process{
+font-size: 25px;
+font-weight: bold;
+color:green;
+
+}
+
+#process a {
+margin-top: 1%;
+font-size: 25px;
+color:green;
+
+}
+
+
 .sub_button{
 
 margin-left: -50px;
@@ -463,7 +483,7 @@ form input{
 
 }
 form textarea{
-   width: 90%;
+   width:90%;
 }
 .form-flex{
    display: inline-flex;
@@ -509,7 +529,7 @@ form textarea{
   margin-left: -5px;
 }
 #submit {
-  margin-left: -50%;
+  margin-left: -45%;
 
 }
 .form_container select{
@@ -637,7 +657,7 @@ for search query */
 }
 .first_line {
 	display: inline-block;
-  width: 40%;
+  width: 50%;
 	margin: 1%;
 	padding: 1%;
 }
@@ -651,6 +671,7 @@ for search query */
   padding-right: 2%;
   margin:auto;
   padding-left: 20px;
+  margin-top: 2%;
 }
 /* Code for errors */
 .errorContainer {
@@ -715,7 +736,7 @@ h2 {
   background-color: green;
   font-size: 30px;
   margin: 10px auto;
-  padding-bottom: 600px;
+
 }
 
 .section1 {
@@ -828,8 +849,9 @@ h2 {
   cursor: pointer;
 }
 #images_container{
-  width: 70%;
-  margin: 0 auto;
+  width: 60%;
+margin: 0 auto;
+height: auto;
 }
 #next_picture{
    right:10%;
@@ -854,17 +876,402 @@ h2 {
 }
 .showimage{
   display: block;
+  width:100%;
 }
-
-.citations {
-  width: 80%;
-}
-
-.citation_text {
-  width: 80%;
-}
-
-.citations p {
+.citations p{
   text-align: left;
-  font-size: 15px;
+}
+
+@media only screen and (max-width: 760px){
+
+  .container-text_board1{
+    margin-top: 40%;
+    background-color: green;
+
+  }
+
+#process{
+width:80%;
+height:80%;
+
+
+}
+  form textarea{
+    width:100%;
+
+
+  }
+
+
+  #events-education{
+  margin: 0;
+
+  }
+
+  .content-flex-image {
+    width: 70%;
+    display: block;
+    margin:0;
+    margin: auto;
+}
+.content-flex-text p{
+margin-top: 50px;
+text-align: center;
+color: white;
+width: 100%;}
+
+.content-flex-text {
+    width: 70%;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+.image1 {
+    margin:0;
+    border-radius: 10%;
+}
+
+.navigation{
+display: block;
+width: 100%;
+}
+
+.image_gap {
+    width: 100%;
+    border-radius: 10%;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+ .navigation nav {
+   margin:0;
+   padding:0
+ }
+
+  nav {
+   box-shadow:0px 0px 5px 2px rgb(0,0,0);
+ }
+
+ .image_gap {
+     width: 100%;
+     border-radius: 10%;
+     margin-left:0;
+     margin-top: 25px;
+ }
+
+ .content-flex-text1 {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.content-flex-text p {
+    margin-top: 50px;
+    text-align: left;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+}
+ .navigation a{
+ display: block;
+width:100%;
+border-radius:0;
+height:30px;
+ }
+
+
+ .showimage .slideshow{
+
+padding: 0px;
+ }
+
+ #submit {
+     margin-left: -50%;
+     margin-left: -80%;
+     width: 200%;
+ }
+
+ #next_picture {
+    right: 10%;
+    width: 10%;
+    height: 10%;
+    top: 25%;
+}
+
+#previous_picture {
+    left: 0%;
+    width: 10%;
+    height: 10%;
+    right: 0%;
+    top: 25%;
+}
+
+ #searchNetid{
+margin-left: -20%;
+
+
+
+ }
+
+
+ .container{background-color: white;
+margin: auto;
+width: 100%;
+text-align: left;
+padding: 0px;
+Margin-top: -40%; }
+  .container p {
+    text-align: left;
+    padding: 1px;
+    font-size: 25px;
+    color: Black;
+    font-weight: bold;
+    overflow-x: hidden;
+}
+
+img {
+    width: 80%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+.catalog_item {
+    position: relative;
+    overflow: hidden;
+    background-size: 100%;
+    margin: 1%;
+    width: 100%;
+    min-height: 250px;
+    display: block;
+    background-color: transparent;
+}
+
+
+#process{
+font-size: 20px;
+font-weight: bold;
+color:green
+
+}
+
+#process a {
+font-size: 20px;
+color:green;
+}
+
+
+
+}
+@media only screen and (max-width: 1700px) and (min-width: 800px)  {
+  .container-text_board1{
+    margin-top:40%;
+    background-color: green;
+
+  }
+
+
+form textarea{
+    width:100%;
+
+
+  }
+
+  #events-education{
+  margin: 0;
+
+  }
+
+  .content-flex-image {
+    width: 70%;
+    display: block;
+    margin:0;
+    margin: auto;
+}
+.content-flex-text p{
+margin-top: 50px;
+text-align: center;
+color: white;
+width: 100%;}
+
+.content-flex-text {
+    width: 70%;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+.image1 {
+    margin:0;
+    border-radius: 10%;
+}
+
+.navigation{
+display: block;
+width: 100%;
+}
+
+.image_gap {
+    width: 100%;
+    border-radius: 10%;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+ .navigation nav {
+   margin:0;
+   padding:0;
+   width: 100%;
+
+ }
+
+  nav {
+   box-shadow:0px 0px 5px 2px rgb(0,0,0);
+ }
+
+ .image_gap {
+     width: 60%;
+     border-radius: 10%;
+     margin-left:0;
+     margin-top: 25px;
+ }
+
+ .content-flex-text1 {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+.content-flex-text p {
+    margin-top: 50px;
+    text-align: left;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+}
+ .navigation a{
+ display: block;
+width:100%;
+border-radius:0;
+height:30px;
+ }
+
+
+ .showimage .slideshow{
+
+padding: 0px;
+ }
+
+ #submit {
+     margin-left: -50%;
+     margin-left: -80%;
+     width: 200%;
+ }
+
+
+
+
+#next_picture {
+    right: 0;
+    width: 5%;
+    height: 5%;
+    top: 25%;
+}
+
+#previous_picture {
+    left: 0%;
+    width: 5%;
+    height: 5%;
+    right: 0%;
+    top: 25%;
+}
+
+ #searchNetid{
+margin-left: -20%;
+
+
+ }
+
+#process{
+font-size: 20px;
+font-weight: bold;
+color:green
+
+}
+
+#process a {
+font-size: 20px;
+color:green;
+}
+
+ .container{background-color: white;
+margin: auto;
+width: 100%;
+text-align: left;
+padding: 0px;
+Margin-top: -40%; }
+  .container p {
+    text-align: left;
+    padding: 1px;
+    font-size: 25px;
+    color: Black;
+    font-weight: bold;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 5px;
+}
+
+.catalog_item {
+    position: relative;
+    overflow: hidden;
+    background-size: 100%;
+    margin: 1%;
+    width: 100%;
+    min-height: 250px;
+    display: block;
+    background-color: transparent;
+}
+
+.container-text_board1{
+
+  background-color: green;
+
+}
+
+
+
+
 }

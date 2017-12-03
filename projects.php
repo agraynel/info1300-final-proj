@@ -12,7 +12,7 @@
    <div class = "container_events_projects">
     <div class = "container-text">
       <div class = "contains-header">
-        <h1>PROJECTS: GOALS and COMPANIES</h1>
+        <h1>PROJECTS: Goals for Colloboration with Companies </h1>
       </div>
       <div class = "container-header-text">
         <img class="title" src="images/projects_mainimage.png" alt = "title">
@@ -31,7 +31,7 @@
                <img class="image_gap" src="images/gap.png" target="_blank"alt ="content-image"></a>
           </div>
             <div class = "content-flex-text1">
-             <p> Colloboration with GAP INC. </p>
+             <p> <i> Colloboration with GAP INC. </i> </p>
               <p >This is one of the first companies that SBA will be working with. Gap,
               Inc known to many as one of the finer clothing places, has been faced with
               with many charges due to the lack of thier care for child labor, and
@@ -48,7 +48,7 @@
               <img class="image1" src="images/alpha.png" target="_blank" alt = "content-image"> </a>
            </div>
            <div class = "content-flex-text1">
-            <p>Colloboration with Alpha Natural Resources </p>
+            <p> <i> Colloboration with Alpha Natural Resources </i> </p>
             <p>They are currently having many issues due to the fact that their internal
              operations has been releasing a lot of pollutants into the atmopshere.
              SBA hopes to work with this company and provide them with
@@ -63,7 +63,7 @@
               <img class="image1" src="images/sustainable.png" target="_blank" alt = "content-image"> </a>
           </div>
           <div class = "content-flex-text1">
-            <p >Colloboration with Sustainable Analytics </p>
+            <p> <i> Colloboration with Sustainable Analytics </i> </p>
             <p>This is another company that SBA plans to work with. There are a
                company that aims to help other companies evaluate their sustainability
                progress through the use of metrics. This Semester SBA will work with this
