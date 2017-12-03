@@ -8,6 +8,7 @@
    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="scripts/projects.js"></script>
  </head>
+ <body>
  <?php include("includes/header.php"); ?>
    <div class = "container_events_projects">
      <div class = "container-text">
@@ -77,4 +78,5 @@
     </div>
   </div>
   <?php include "includes/footer.php";?>
+  </body>
 </html>

@@ -30,6 +30,7 @@
     <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="scripts/events.js"></script>
   </head>
+  <body>
   <?php include ("includes/header.php"); ?>
     <div class = "container_events_projects">
       <div class = "container-text_events">
@@ -225,12 +226,12 @@
       </div>
       <div id="addComment">
       <h3>Add a Comment</h3>
-        <form method="post" action="events.php" id="commentForm" novalidate>
-          <div class="nameHolder">
-            <label for="name">Name: </label>
+        <form method="post" class="form_container" action="events.php" id="commentForm" novalidate>
+          <div class="form-group">
+            <label for="name">Name: </label><br>
             <input id="name" name="name" placeholder="Your Name">
           </div>
-          <div>
+          <div class="form-group">
             <label class="commentLabel" for="comment">Comment: </label>
             <textarea name="comment" placeholder="Your Comment"></textarea>
           </div>
@@ -242,4 +243,5 @@
       </div>
     </div>
   <?php include("includes/footer.php"); ?>
+  </body>
 </html>
