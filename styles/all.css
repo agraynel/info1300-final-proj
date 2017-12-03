@@ -1,5 +1,6 @@
 body{
-font-family: Georgia;
+  font-family: Georgia;
+  width: 95%;
 }
 
 /* code for the header */
@@ -88,16 +89,6 @@ color:Green;
   padding: 10px;
 }
 
-.container_events_projects{
-  background-color: white;
-  color:Black;
-  margin: auto;
-  width: 85%;
-  text-align: center;
-  padding: 10px;
-
-}
-
 #container_button{
   text-align: center;
   margin-bottom: 25px;
@@ -105,11 +96,13 @@ color:Green;
 }
 .container-text {
   padding:2%;
-  margin-left: 100px;
+  margin: 1%;
+  padding: 1%;
   background-color: green;
 }
 .container-text_board{
-  margin-left: 10%;
+  margin: 2%;
+  padding: 1%;
   background-color: green;
 }
 
@@ -260,7 +253,7 @@ width:80%;
 }
 
 .footlink img{
-  width:50px;
+  width:16px;
 }
 
 img{
@@ -329,13 +322,15 @@ elements specified within the container */
   font-size: 25px;
 	color: White;
   font-weight: bold;
+  width: 95%;
 }
-.main_statement{
-font-size: 25px;
-color:white;
-font-weight: bold;
-text-align: left;
 
+.main_statement{
+  font-size: 20px;
+  color:white;
+  font-weight: bold;
+  text-align: left;
+  overflow-x:hidden;
 }
 
 
@@ -481,9 +476,6 @@ form input{
   font-size: 20px;
   margin-bottom: 30px;
 
-}
-form textarea{
-   width:90%;
 }
 .form-flex{
    display: inline-flex;
@@ -664,14 +656,23 @@ for search query */
 
 /* Code for footer*/
 .footlink {
+  display: inline-flex;
   width: 100%;
-  background-color:green;
+  background-color:gray;
   color: white;
   padding-top: 1%;
   padding-right: 2%;
   margin:auto;
-  padding-left: 20px;
   margin-top: 2%;
+}
+
+.footlink1 {
+  width: 80%;
+}
+
+.footlink2 {
+  float: right;
+  width: 15%;
 }
 /* Code for errors */
 .errorContainer {
@@ -878,8 +879,12 @@ height: auto;
   display: block;
   width:100%;
 }
-.citations p{
+.citations {
+  width: 95%;
+  padding: 2%;
+  margin:2%;
   text-align: left;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 760px){
@@ -887,25 +892,16 @@ height: auto;
   .container-text_board1{
     margin-top: 40%;
     background-color: green;
-
   }
 
-#process{
-width:80%;
-height:80%;
-
-
-}
-  form textarea{
-    width:100%;
-
-
+  #process{
+    width:80%;
+    height:80%;
   }
 
 
   #events-education{
-  margin: 0;
-
+    margin: 0;
   }
 
   .content-flex-image {
@@ -944,8 +940,8 @@ img {
 }
 
 .navigation{
-display: block;
-width: 100%;
+  display: block;
+  width: 85%;
 }
 
 .image_gap {
@@ -1081,13 +1077,6 @@ color:green;
   .container-text_board1{
     margin-top:40%;
     background-color: green;
-
-  }
-
-
-form textarea{
-    width:100%;
-
 
   }
 

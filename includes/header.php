@@ -14,8 +14,3 @@
     </nav>
   </div>
 </header>
-
-<!-- #navigation{
-position:absolute;
-left:
-}bottom:0- need to declare that -->
