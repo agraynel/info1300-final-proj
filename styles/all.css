@@ -330,7 +330,7 @@ elements specified within the container */
   color:white;
   font-weight: bold;
   text-align: left;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 
@@ -884,7 +884,7 @@ height: auto;
   padding: 2%;
   margin:2%;
   text-align: left;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 760px){
