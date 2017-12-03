@@ -1,27 +1,30 @@
+
 <?php
 //Citation from Lab 13
 // Code for inputting data of comments  into CSV file
-  include ("includes/csvStorage.php");
-  $csvFile = csvGetFile('data/comments.csv');
-  $comments = array();
-  foreach($csvFile as $row) {
-    array_push($comments, $row);
-  }
+include ("includes/csvStorage.php");
+$csvFile = csvGetFile('data/comments.csv');
+$comments = array();
+foreach($csvFile as $row) {
+  array_push($comments, $row);
+}
 
-  $submit = $_POST["submit"];
-  if (isset($submit)) {
-  	$name = htmlspecialchars($_POST["name"]);
-  	$commentText = htmlspecialchars($_POST["comment"]);
-  	$newComment = array($name, $commentText);
-  	array_push($comments, $newComment);
-  	csvAppendToFile($csvFile, $newComment);
-  	header("Location: events.php");
-  	return;
-  }
+$submit = $_POST["submit"];
+if (isset($submit)) {
+	$name = htmlspecialchars($_POST["name"]);
+	$commentText = htmlspecialchars($_POST["comment"]);
+	$newComment = array($name, $commentText);
+	array_push($comments, $newComment);
+	csvAppendToFile($csvFile, $newComment);
+	header("Location: events.php");
+	return;
+
+}
 ?>
 
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8">
     <title>Cornell SBA's Intended Events</title>
@@ -31,14 +34,24 @@
     <script src="scripts/events.js"></script>
   </head>
   <body>
+=======
+ <head>
+   <meta charset="UTF-8">
+   <title>Cornell SBA's Intended Events</title>
+   <link rel="stylesheet" href="styles/all.css" type="text/css">
+   <link rel="icon" href="images/icon.png">
+   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+   <script src="scripts/events.js"></script>
+</head>
+>>>>>>> parent of 17d049b... Fix indentations
   <?php include ("includes/header.php"); ?>
-    <div class = "container_events_projects">
-      <div class = "container-text_events">
-        <div class = "contains-header">
+   <div class = "container_events_projects">
+    <div class = "container-text_events">
+      <div class = "contains-header">
           <h1> Events: Skill Wokrshop, Networking Conferences, Black Rock Guest Lecturers</h1>
-        </div>
+      </div>
         <img class="title" src="images/greenevents.png" alt = "title">
-        <div class = "content-block">
+      <div class = "content-block">
           <h2>Education Seminars</h2>
         <div class = "content-flex">
           <div class = "content-flex-image">
@@ -93,137 +106,152 @@
                will understand both conventional and non-conventional methods of financing such
                as microfinance and crowdfunding and recognizes a variety of alternative approaches
               that support positive social and environmental results.</p>
-        </div>
-      </div>
-    </div>
-    <div class = "content-block">
-         <h2>Guest Lectures</h2>
-      <div class = "content-flex">
-        <div class = "content-flex-image">
-          <img class="image" id="events-blackrock"  src="images/blackrock.png" alt = "events-blackrock">
-        </div>
-        <div class = "content-flex-text">
-          <p>SBA values the experience of today’s industry
-            leaders. We invite representatives from companies such as Credit Suisse,
-            Guest speakers give students a more dimensional perspective on
-            sustainable business and its functions today. Guest Speaker from
-            Black Rock will be able to provide information on the corporate
-            financial sustainability and how that can be improved so that
-            business start taking a more active role in the enviornment.The
-            club plans to have speakers from various fields in Black
-            Rock speak to the club
-          </p>
-          <p class="section2"> <i> More Information on Guest Speakers </i> </p>
-        </div>
-        <div class="speakers2">
-            <p class="citations">
-              <i> Black Rock Guest Session 1: Marketing- Frank Cooper III </i><br/>
-            </p>
-            <p>
-              Frank Cooper III, Senior Managing Director, is the Global Chief
-              Marketing Officer of BlackRock. He is a member of the Global Executive
-             Committee and Global Operating Committee. As Global CMO, Mr. Cooper is
-             responsible for shaping BlackRock’s global brand and marketing strategy for
-             institutional and retail clients, including overseeing all digital, branding,
-             research and insights functions at the firm.
-          </p>
-          <p class="citations">
-            <i> Black Rock Guest Session 2: Finance- Gary Shedlin    </i><br/> </p>
-            <p> Gary Shedlin is BlackRock's Chief Financial Officer and a member
-              of BlackRock's Global Executive Committee.Prior to joining BlackRock in
-              2013, Mr. Shedlin was at Morgan Stanley where he was a Vice Chairman,
-              Investment Banking, and a Managing Director in the Financial Institutions
-               Group. During his investment banking career, he focused on providing
-              strategic advice to a broad array of banks, finance, asset management
-              and brokerage clients. Prior to joining Morgan Stanley, Mr. Shedlin was
-              Chairman of Citi’s Financial Institutions Group and a Managing Director
-              and Co-Head of the Financial Institutions Group at Lazard.Mr. Shedlin received a BA in Economics,
-              summa cum laude, from Colgate University, where he was elected to Phi Beta Kappa,
-              and his MBA from Harvard Business School.
-          </p>
-          <p class="citations">
-            <i> Black Rock Guest Session 3:</i><br/>
-          </p>
-          <p>Business is about more than just maximizing the return for your
-            shareholders. In today's business landscape, companies are increasingly
-            responding to the demands from all of its stakeholders:customers,
-            suppliers, vendors, investors, employees and communities. In this video
-            you will learn how to take a comprehensive look at stakeholder engagement
-            to drive business value and prepare for future business challenges by
-            understanding the issues most material to your organization.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class = "content-block">
-        <h2>Private Networking</h2>
-      <div class = "content-flex">
-        <div class = "content-flex-image">
-            <img class="image" id="events-networking" src="images/networking.png" alt = "events-networking">
-        </div>
-        <div class = "content-flex-text">
-           <p>  A primary goal of SBA is to provide the means for our members to
-            engage with industry leaders, powerful alumni, influential faculty, and
-            other club members in the context of entering the industry. We achieve
-            this through private networking events where members not only build
-            connections, but practice and develop the networking skills
-            necessary to succeed in business. We plans on networking with
-            companies such as MorganStanley, Credit Suisse and Bank of
-            American in the imminent future. Networking is often more important
-            than simply suceeding in academics. This is because Networking allows
-            people to understand the opportunities that exist outside the business
-            world. </p>
-          <p class="section3"> <i> More Information about Networking Opportunities at Cornell </i></p>
           </div>
-            <div class="speakers3">
+        </div>
+      </div>
+      <div class = "content-block">
+           <h2>Guest Lectures</h2>
+        <div class = "content-flex">
+          <div class = "content-flex-image">
+            <img class="image" id="events-blackrock"  src="images/blackrock.png" alt = "events-blackrock">
+          </div>
+          <div class = "content-flex-text">
+             <p>SBA values the experience of today’s industry
+                leaders. We invite representatives from companies such as Credit Suisse,
+                Guest speakers give students a more dimensional perspective on
+                sustainable business and its functions today. Guest Speaker from
+                Black Rock will be able to provide information on the corporate
+                financial sustainability and how that can be improved so that
+                business start taking a more active role in the enviornment.The
+                club plans to have speakers from various fields in Black
+                Rock speak to the club
+            </p>
+            <p class="section2"> <i> More Information on Guest Speakers </i> </p>
+          </div>
+          <div class="speakers2">
               <p class="citations">
-                <i> Special Events for Club Members taking place in January </i><br/> </p>
-                <p>SBA willregularly hosts professional mixers for its students, at which students can
-                  mingle with area scientists and consultants, hearing about potential career paths,
-                   learning about the environmental science community in Ithaca, and making connections wtih
-                   prospective employers and mentors. Students have the opportunity to meet with SBA supporters
-                   like SBA's first Research Scholarship Fundraiser at Cornell in January EVS also brings in
-                   guests to speak with EVS students about everything from environmental consulting with guest Pete Regan,
-                   former chairman of Environmental Resources Management, to environmental behavior and poverty alleviation
-                   with guest Dr. Saleem Ali, author of Treasures of the Earth: Need, Green, and a Sustainable Future.</p>
-               <p class="citations">
-                 <i> Potential Enivronmental Consulting Companies that students may network with in the appraoching semester </i><br/> </p>
-                 <ul>
-                   <li>  ASI Energy     </li>
-                   <li>   GSI Consultants </li>
-                   <li>   Tetra Tech       </li>
-                   <li>   Eco Consulting Ithaca Services </li>
-                 </ul>
-              <p class="citations">
-                <i> Networking Conference Opportunities for Environmental Consulting</i><br/> </p>
-                <ul>
-                  <li>  Ithaca Conference of Sustainable Engineers  </li>
-                  <li>   National Business Association of Environmental Consultants </li>
-                  <li>   Environmental Consulting Assoication of New York University </li>
-                  <li>   Assoicationg for Enviroment and Business Minded Individuals National Conference</li>
-                </ul>
+                <i> Black Rock Guest Session 1: Marketing- Frank Cooper III </i><br/>
+              </p>
+              <p>
+                Frank Cooper III, Senior Managing Director, is the Global Chief
+                Marketing Officer of BlackRock. He is a member of the Global Executive
+               Committee and Global Operating Committee. As Global CMO, Mr. Cooper is
+               responsible for shaping BlackRock’s global brand and marketing strategy for
+               institutional and retail clients, including overseeing all digital, branding,
+               research and insights functions at the firm.
+            </p>
+            <p class="citations">
+              <i> Black Rock Guest Session 2: Finance- Gary Shedlin    </i><br/> </p>
+              <p> Gary Shedlin is BlackRock's Chief Financial Officer and a member
+                of BlackRock's Global Executive Committee.Prior to joining BlackRock in
+                2013, Mr. Shedlin was at Morgan Stanley where he was a Vice Chairman,
+                Investment Banking, and a Managing Director in the Financial Institutions
+                 Group. During his investment banking career, he focused on providing
+                strategic advice to a broad array of banks, finance, asset management
+                and brokerage clients. Prior to joining Morgan Stanley, Mr. Shedlin was
+                Chairman of Citi’s Financial Institutions Group and a Managing Director
+                and Co-Head of the Financial Institutions Group at Lazard.Mr. Shedlin received a BA in Economics,
+                summa cum laude, from Colgate University, where he was elected to Phi Beta Kappa,
+                and his MBA from Harvard Business School.
+            </p>
+            <p class="citations">
+              <i> Black Rock Guest Session 3:</i><br/>
+            </p>
+            <p>Business is about more than just maximizing the return for your
+              shareholders. In today's business landscape, companies are increasingly
+              responding to the demands from all of its stakeholders:customers,
+              suppliers, vendors, investors, employees and communities. In this video
+              you will learn how to take a comprehensive look at stakeholder engagement
+              to drive business value and prepare for future business challenges by
+              understanding the issues most material to your organization.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class = "content-block">
+          <h2>Private Networking</h2>
+        <div class = "content-flex">
+          <div class = "content-flex-image">
+              <img class="image" id="events-networking" src="images/networking.png" alt = "events-networking">
+          </div>
+          <div class = "content-flex-text">
+             <p>  A primary goal of SBA is to provide the means for our members to
+              engage with industry leaders, powerful alumni, influential faculty, and
+              other club members in the context of entering the industry. We achieve
+              this through private networking events where members not only build
+              connections, but practice and develop the networking skills
+              necessary to succeed in business. We plans on networking with
+              companies such as MorganStanley, Credit Suisse and Bank of
+              American in the imminent future. Networking is often more important
+              than simply suceeding in academics. This is because Networking allows
+              people to understand the opportunities that exist outside the business
+              world. </p>
+            <p class="section3"> <i> More Information about Networking Opportunities at Cornell </i></p>
+            </div>
+              <div class="speakers3">
+                <p class="citations">
+                  <i> Special Events for Club Members taking place in January </i><br/> </p>
+                  <p>SBA willregularly hosts professional mixers for its students, at which students can
+                    mingle with area scientists and consultants, hearing about potential career paths,
+                     learning about the environmental science community in Ithaca, and making connections wtih
+                     prospective employers and mentors. Students have the opportunity to meet with SBA supporters
+                     like SBA's first Research Scholarship Fundraiser at Cornell in January EVS also brings in
+                     guests to speak with EVS students about everything from environmental consulting with guest Pete Regan,
+                     former chairman of Environmental Resources Management, to environmental behavior and poverty alleviation
+                     with guest Dr. Saleem Ali, author of Treasures of the Earth: Need, Green, and a Sustainable Future.</p>
+                 <p class="citations">
+                   <i> Potential Enivronmental Consulting Companies that students may network with in the appraoching semester </i><br/> </p>
+                   <ul>
+                     <li>  ASI Energy     </li>
+                     <li>   GSI Consultants </li>
+                     <li>   Tetra Tech       </li>
+                     <li>   Eco Consulting Ithaca Services </li>
+                   </ul>
+                <p class="citations">
+                  <i> Networking Conference Opportunities for Environmental Consulting</i><br/> </p>
+                  <ul>
+                    <li>  Ithaca Conference of Sustainable Engineers  </li>
+                    <li>   National Business Association of Environmental Consultants </li>
+                    <li>   Environmental Consulting Assoication of New York University </li>
+                    <li>   Assoicationg for Enviroment and Business Minded Individuals National Conference</li>
+                  </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div id="commentsSection">
-      <div id="commentsHolder">
-        <h2>Comments</h2>
-        <?php foreach($comments as $row) {
-          $name = $row[0];
-          $commentText = $row[1];
-        ?>
-          <div class="comment">
-            <p class="commentBody">
-              <?php echo($commentText); ?>
-            </p>
-            <p class="commentAuthor">
-              <?php echo($name); ?>
-            </p>
-          </div>
-        <?php } ?>
+   </div>
+  <div id="commentsSection">
+  <div id="commentsHolder">
+    <h2>Comments</h2>
+    <?php foreach($comments as $row) {
+      $name = $row[0];
+      $commentText = $row[1];
+      ?>
+      <div class="comment">
+        <p class="commentBody">
+          <?php echo($commentText); ?>
+        </p>
+        <p class="commentAuthor">
+          <?php echo($name); ?>
+        </p>
       </div>
+      <?php
+    }
+    ?>
+  </div>
+  <div id="addComment">
+    <h3>Add a Comment</h3>
+    <form method="post" action="events.php" id="commentForm" novalidate>
+      <div class="nameHolder">
+        <label for="name">Name: </label>
+        <input id="name" name="name" placeholder="Your Name">
+      </div>
+      <div>
+        <label class="commentLabel" for="comment">Comment: </label>
+        <textarea name="comment" placeholder="Your Comment"></textarea>
+      </div>
+<<<<<<< HEAD
       <div id="addComment">
       <h3>Add a Comment</h3>
         <form method="post" class="form_container" action="events.php" id="commentForm" novalidate>
@@ -235,13 +263,15 @@
             <label class="commentLabel" for="comment">Comment: </label>
             <textarea name="comment" placeholder="Your Comment"></textarea>
           </div>
+=======
+>>>>>>> parent of 17d049b... Fix indentations
 
-          <div>
-            <button type="submit" name="submit" class="submit">Submit</button>
-          </div>
-        </form>
+      <div>
+        <button type="submit" name="submit" class="submit">Submit</button>
       </div>
-    </div>
+    </form>
+   </div>
+  </div>
   <?php include("includes/footer.php"); ?>
   </body>
 </html>
