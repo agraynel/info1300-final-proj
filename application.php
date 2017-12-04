@@ -59,7 +59,8 @@
     $input2Valid = true;
     $input3Valid = true;
 
-  }?>
+  }
+?>
 
 <!DOCTYPE html>
 <html>
