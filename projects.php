@@ -8,12 +8,8 @@
    <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script src="scripts/projects.js"></script>
  </head>
-<<<<<<< HEAD
  <body>
- <?php include("includes/header.php"); ?>
-=======
   <?php include("includes/header.php"); ?>
->>>>>>> parent of 17d049b... Fix indentations
    <div class = "container_events_projects">
     <div class = "container-text">
       <div class = "contains-header">

@@ -1,30 +1,28 @@
-
 <?php
-//Citation from Lab 13
-// Code for inputting data of comments  into CSV file
-include ("includes/csvStorage.php");
-$csvFile = csvGetFile('data/comments.csv');
-$comments = array();
-foreach($csvFile as $row) {
-  array_push($comments, $row);
-}
+  //Citation from Lab 13
+  // Code for inputting data of comments  into CSV file
+  include ("includes/csvStorage.php");
+  $csvFile = csvGetFile('data/comments.csv');
+  $comments = array();
+  foreach($csvFile as $row) {
+    array_push($comments, $row);
+  }
 
-$submit = $_POST["submit"];
-if (isset($submit)) {
-	$name = htmlspecialchars($_POST["name"]);
-	$commentText = htmlspecialchars($_POST["comment"]);
-	$newComment = array($name, $commentText);
-	array_push($comments, $newComment);
-	csvAppendToFile($csvFile, $newComment);
-	header("Location: events.php");
-	return;
+  $submit = $_POST["submit"];
+  if (isset($submit)) {
+  	$name = htmlspecialchars($_POST["name"]);
+  	$commentText = htmlspecialchars($_POST["comment"]);
+  	$newComment = array($name, $commentText);
+  	array_push($comments, $newComment);
+  	csvAppendToFile($csvFile, $newComment);
+  	header("Location: events.php");
+  	return;
 
-}
+  }
 ?>
 
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8">
     <title>Cornell SBA's Intended Events</title>
@@ -34,16 +32,7 @@ if (isset($submit)) {
     <script src="scripts/events.js"></script>
   </head>
   <body>
-=======
- <head>
-   <meta charset="UTF-8">
-   <title>Cornell SBA's Intended Events</title>
-   <link rel="stylesheet" href="styles/all.css" type="text/css">
-   <link rel="icon" href="images/icon.png">
-   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
-   <script src="scripts/events.js"></script>
-</head>
->>>>>>> parent of 17d049b... Fix indentations
+
   <?php include ("includes/header.php"); ?>
    <div class = "container_events_projects">
     <div class = "container-text_events">
@@ -219,58 +208,40 @@ if (isset($submit)) {
           </div>
         </div>
       </div>
-    </div>
-   </div>
-  <div id="commentsSection">
-  <div id="commentsHolder">
-    <h2>Comments</h2>
-    <?php foreach($comments as $row) {
-      $name = $row[0];
-      $commentText = $row[1];
-      ?>
-      <div class="comment">
-        <p class="commentBody">
-          <?php echo($commentText); ?>
-        </p>
-        <p class="commentAuthor">
-          <?php echo($name); ?>
-        </p>
-      </div>
-      <?php
-    }
-    ?>
   </div>
-  <div id="addComment">
+  <div id="commentsSection">
+    <div id="commentsHolder">
+      <h2>Comments</h2>
+      <?php foreach($comments as $row) {
+        $name = $row[0];
+        $commentText = $row[1];
+        ?>
+        <div class="comment">
+          <p class="commentBody">
+            <?php echo($commentText); ?>
+          </p>
+          <p class="commentAuthor">
+            <?php echo($name); ?>
+          </p>
+        </div>
+      <?php } ?>
+    </div>
+    <div id="addComment">
     <h3>Add a Comment</h3>
-    <form method="post" action="events.php" id="commentForm" novalidate>
-      <div class="nameHolder">
-        <label for="name">Name: </label>
-        <input id="name" name="name" placeholder="Your Name">
-      </div>
-      <div>
-        <label class="commentLabel" for="comment">Comment: </label>
-        <textarea name="comment" placeholder="Your Comment"></textarea>
-      </div>
-<<<<<<< HEAD
-      <div id="addComment">
-      <h3>Add a Comment</h3>
-        <form method="post" class="form_container" action="events.php" id="commentForm" novalidate>
-          <div class="form-group">
-            <label for="name">Name: </label><br>
-            <input id="name" name="name" placeholder="Your Name">
-          </div>
-          <div class="form-group">
-            <label class="commentLabel" for="comment">Comment: </label>
-            <textarea name="comment" placeholder="Your Comment"></textarea>
-          </div>
-=======
->>>>>>> parent of 17d049b... Fix indentations
-
-      <div>
-        <button type="submit" name="submit" class="submit">Submit</button>
-      </div>
-    </form>
-   </div>
+      <form method="post" class="form_container" action="events.php" id="commentForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name: </label><br>
+          <input id="name" name="name" placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label class="commentLabel" for="comment">Comment: </label>
+          <textarea name="comment" placeholder="Your Comment"></textarea>
+        </div>
+        <div>
+          <button type="submit" name="submit" class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
   <?php include("includes/footer.php"); ?>
   </body>

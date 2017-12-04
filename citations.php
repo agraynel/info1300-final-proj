@@ -11,9 +11,9 @@
   <div class = "container_events_projects">
    <div class = "container-text">
      <div class = "contains-header">
-        <h1> Citations for Website</h1>
-      </div>
-      <div class = "container-header-text">
+       <h1> Citations for Website</h1>
+     </div>
+       <div class = "container-header-text">
         <h2>IMAGE CITATIONS </h2>
           <p class="citations">
             <i>Main Picture Image from Index page: </i><br/></p>
@@ -38,11 +38,9 @@
           <i> Content for Extra Information on the Projects Page </i><br/> </p>
           <p>  http://sustainablebizconsulting.com/ </p>
           <p> https://www.bcorporation.net/community/sustainable-business-consulting </p>
-
-          <p> <p class="citations">
-           <i>Background Picture Image from Application page: </i><br/> </p>
-           <p>http://sustainablebizconsulting.com/education/content-services/ </p>
-        </div>
+        <p> <p class="citations">
+         <i>Background Picture Image from Application page: </i><br/> </p>
+         <p>http://sustainablebizconsulting.com/education/content-services/ </p>
       </div>
     </div>
   </div>
