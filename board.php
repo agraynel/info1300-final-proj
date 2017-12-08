@@ -1,5 +1,4 @@
 <?php
-include ("includes/header.php");
 // implement search functionality, developed by Yi Chen and Anisha, citations are present when needed
 // This is the PHP class of board members. structure of class learned from python at umich during the summer, conept of this introduced by Yi
 class Member {
@@ -60,7 +59,6 @@ class Member {
       $members[] = new Member($member[0], $member[1], $member[2], $member[3], $member[4], $member[5]);
     }
   }
-
 }
 ?>
 <!DOCTYPE html>
@@ -72,6 +70,7 @@ class Member {
   <link rel="icon" href="images/icon.png">
 </head>
  <body>
+	 <?php include ("includes/header.php"); ?>
    <div class = "container_events_projects">
      <div class = "container-text_board">
        <div class="title_image">
@@ -83,20 +82,20 @@ class Member {
           <b> <i> BOARD MEMBERS </i> </b><br/>
           These are the members of Cornell's SBA Board for the year 2017-2018.
           These members are hoping to create an enivoronment where students are
-          motivated to aquire leaderhsip qualities that will help them in their
-          future endeavors and will simulatneously learn about the various
+          motivated to acquire leadership qualities that will help them in their
+          future endeavors and will simultaneously learn about the various
           consultants that they can have and use to be the most successfull
-          in whatthat they want to do. </p>
+          in what they want to do. </p>
           <form id="search_form" name="search_form" class="search_form" method="POST" action="board.php">
             <!-- Search name and net id fields -->
             <div class="first_line">
               <input id="searchName" type="text" placeholder="Name" name="searchName" maxlength="25" autofocus pattern="[0-9A-Za-z-_ ]*">
             </div>
             <div class="first_line">
-              <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" autofocus pattern="[0-9a-zA-Z]*">
+              <input id="searchNetid" type="text" placeholder="NetID" name="searchNetid" maxlength="10" >
             </div>
             <div class="search_button">
-              <input id="submit" id="sub_button" class="button" type="submit" name="search_submit" value="SEARCH">
+              <input id="submit"  class="button" type="submit" name="search_submit" value="SEARCH">
             </div>
           </form>
         </div>
@@ -136,7 +135,6 @@ class Member {
         </div>
       </div>
     </div>
-
-  <?php include "includes/footer.php";?>
+		<?php include "includes/footer.php";?>
 	</body>
 </html>
