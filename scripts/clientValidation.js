@@ -4,34 +4,62 @@ $(document).ready(function () {
   $("#contact_form").on("submit", function() {
     var formValid = true;
     //checking if name, phone and question is valid
-    var nameIsValid = $("#name").prop("validity").valid;
+    var nameIsValid = $("#firstname").prop("validity").valid;
     if(nameIsValid) {
-      $("#nameError").hide();
+      $("#fnameError").hide();
     } else {
-      $("#nameError").show();
+      $("#fnameError").show();
       formValid = false;
     }
-    var questionIsValid = $("#question").prop("validity").valid;
-    if(questionIsValid) {
-      $("#messageError").hide();
+    var nameIsValid = $("#lastname").prop("validity").valid;
+    if(nameIsValid) {
+      $("#lnameError").hide();
     } else {
-      $("#messageError").show();
+      $("#lnameError").show();
       formValid = false;
     }
-    // if email is empty (that is, the value is missing)
-    if($("#userEmail").prop("validity").valueMissing)
-      $("#emailErrorNoEmail").show();
-      formValid = false;
-    } else {
-      $("#emailErrorNoEmail").hide();
-    }
-    // if email is invalid (that is, there is a type mismatch)
-    if($("#userEmail").prop("validity").typeMismatch) {
-      $("#emailErrorInvalEmail").show();
-      formValid = false;
-    } else {
-      $("#emailErrorInvalEmail").hide();
-    }
+      var EmailMissing= $("#email").prop("validity").valueMissing;
+      var EmailInvalid= $("#email").prop("validity").typeMismatch;
+      if(EmailMissing){
+            $("#emailError").show();
+            formValid = false;
+      } else if (EmailInvalid) {
+            $("emailError").show();
+            formValid = false;
+      } else {
+            $("#emailError").hide();
+      }
+      var studentyear= $("#contact").prop("validity").valid;
+      if(studentyear){
+            $("#dropError").hide();
+      } else {
+            $("#dropError").show();
+            formValid = false;
+      }
+
+      var something=0;
+      var InterestsIsCorrect= $("#major").val().length > 0;
+      if (InterestsIsCorrect){
+              something=1;
+       } else {
+              $("#majorError").show();
+              formValid = false;
+       }
+      if (something==1) {
+              $("#majorError").hide();
+       }
+
+       var something=0;
+       var InterestsIsCorrect= $("#join").val().length > 0;
+       if (InterestsIsCorrect){
+              something=1;
+       } else {
+              $("#joinError").show();
+              formValid = false;
+       }
+       if (something==1) {
+              $("#joinError").hide();
+       }
 
     return formValid;
   });

@@ -1,4 +1,3 @@
-<header>
   <figure class="logo">
     <img class="logo" alt="club logo" src="images/logo.png"/>
   </figure>
@@ -13,4 +12,3 @@
       <a title="Citations" href="citations.php"> CITATION</a>
     </nav>
   </div>
-</header>
